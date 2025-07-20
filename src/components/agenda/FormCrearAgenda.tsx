@@ -19,6 +19,9 @@ export default function FormCrearAgenda({
 
   const [state, formAction] = useActionState(handleCrearAgenda, initialState);
 
+  if (state.success) {
+    router.push("/agenda");
+  }
   return (
     <form
       action={formAction}

@@ -3,7 +3,7 @@ import { CardResumen } from "@/components/maricure/cardResumen";
 import { User } from "lucide-react";
 
 export default async function AdminPage() {
-  const { count: cantUsers, error } = await supabaseServerActionClient
+  const { count: cantUsers } = await supabaseServerActionClient
     .from("Usuario")
     .select("*", { count: "exact" });
   const { count: cantServices } = await supabaseServerActionClient
