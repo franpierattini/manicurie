@@ -16,6 +16,7 @@ export async function middleware(req: NextRequest) {
     "/auth/client/register",
     "/auth/manicure/login",
     "/auth/manicure/register",
+    "/auth/admin/login",
     "/favicon.ico",
   ];
 

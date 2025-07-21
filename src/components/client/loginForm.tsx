@@ -7,7 +7,10 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
 
-const LoginForm = () => {
+interface IProps {
+  notShowLink?: boolean;
+}
+const LoginForm = ({ notShowLink }: IProps) => {
   const [correo, setCorreo] = useState("");
   const [contrasena, setContrasena] = useState("");
   const [error, setError] = useState("");
@@ -81,14 +84,16 @@ const LoginForm = () => {
           INGRESAR
         </Button>
 
-        <Button
-          variant="outline"
-          className="border-pink-500 text-pink-600 hover:bg-pink-100"
-        >
-          <Link href="/auth/client/register?rol=clienta">
-            REGISTRARME COMO CLIENTE
-          </Link>
-        </Button>
+        {!notShowLink && (
+          <Button
+            variant="outline"
+            className="border-pink-500 text-pink-600 hover:bg-pink-100"
+          >
+            <Link href="/auth/client/register?rol=clienta">
+              REGISTRARME COMO CLIENTE
+            </Link>
+          </Button>
+        )}
       </div>
     </form>
   );

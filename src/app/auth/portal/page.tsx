@@ -23,17 +23,23 @@ export default function Page() {
 
           <div className="flex flex-col gap-4 w-full">
             <Link
-              href="/auth/manicure/register?rol=manicurista"
+              href="/auth/manicure/register"
               className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded text-center"
             >
               PROFESIONALES
             </Link>
 
             <Link
-              href="/auth/client/register?rol=clienta"
+              href="/auth/client/register"
               className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded text-center"
             >
               CLIENTE
+            </Link>
+            <Link
+              href="/auth/admin/login"
+              className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded text-center"
+            >
+              ADMINISTRADOR
             </Link>
           </div>
         </CardContent>
