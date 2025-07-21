@@ -16,7 +16,6 @@ import {
 } from "../ui/select";
 import { EditInputPlace } from "./EditInputPlace";
 import { redirect } from "next/navigation";
-import { toast } from "sonner";
 
 const initialState = { success: null, message: "" };
 
@@ -30,7 +29,6 @@ export default function EditPerfilFormManicurie({
     FormData
   >(updateManicurista, initialState);
   if (state.success) {
-    toast.success("Perfil actualizado con exito");
     redirect("/profile");
   }
   return (
